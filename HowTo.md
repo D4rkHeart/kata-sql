@@ -119,3 +119,12 @@ pour réaliser les demandes du [README.md](README.md).
    WHERE name_fr="France" or "Allemagne" or "Italie" or "Autriche"`  
       je liste (nom & prénom) des membres habitants de France, Allemagne, Italie, Autriche 
       et Lischenchtein.
+
+1. Cette requête:  
+   `SELECT name_fr AS "Pays",COUNT(*) AS "NbPersonne" 
+   FROM countries_people 
+   LEFT JOIN people ON people.id = countries_people.idperson 
+   LEFT JOIN countries ON countries.id = countries_people.idcountry 
+   WHERE name_fr is not null 
+   GROUP BY name_fr`  
+      permet de compter combien il y a de personnes par pays.
