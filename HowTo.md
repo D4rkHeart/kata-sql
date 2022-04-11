@@ -59,3 +59,7 @@ pour réaliser les demandes du [README.md](README.md).
 1. La moyenne d'age est `NUMBER`, ma requête est:  
    `SELECT FORMAT(AVG(DATEDIFF(now(),birthdate)/365),0) 
    AS "Age moyen" FROM people`
+
+1. Le plus long prénom est `TEXT`, ma requête est:  
+   `SELECT firstname FROM people 
+   ORDER BY LENGTH(firstname) DESC LIMIT 1`
