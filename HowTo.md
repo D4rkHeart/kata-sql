@@ -46,3 +46,8 @@ pour réaliser les demandes du [README.md](README.md).
    `SELECT * FROM people 
    ORDER BY birthdate 
    ASC LIMIT 5 `
+
+1. Les 5 personnes plus jeunes sont obtenus avec cette requête:  
+   `SELECT * FROM people 
+   ORDER BY birthdate 
+   DESC LIMIT 5 `
