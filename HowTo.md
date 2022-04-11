@@ -24,3 +24,7 @@ pour réaliser les demandes du [README.md](README.md).
    FROM people 
    GROUP BY idnumber 
    HAVING COUNT(idnumber) > 1;`
+
+1. Cette requête permet de trouver les infos de la personne dont le nom de famille est "Warren" ?
+   `SELECT * FROM people 
+   WHERE lastname="Warren`
