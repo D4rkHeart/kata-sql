@@ -55,3 +55,7 @@ pour réaliser les demandes du [README.md](README.md).
 1. La requête suivante permet de trouver l'age en année de chaque personne:  
    `SELECT FORMAT(DATEDIFF(now(),birthdate)/365,0) 
    FROM people`
+
+1. La moyenne d'age est `NUMBER`, ma requête est:  
+   `SELECT FORMAT(AVG(DATEDIFF(now(),birthdate)/365),0) 
+   AS "Age moyen" FROM people`
