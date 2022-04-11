@@ -85,6 +85,20 @@ pour réaliser les demandes du [README.md](README.md).
    `SELECT DATEDIFF(now(),birthdate)/365 
    AS Age`
 
-1. Pour générer une liste contenant `Prénom Nom <email@provider.com>;  
+1. Pour générer une liste contenant `Prénom Nom <email@provider.com>`;  
    `SELECT firstname, lastname, email FROM people 
    WHERE email LIKE '%_@__%.__%' `
+
+1. Avec cette requête:  
+   `SELECT idcountry,COUNT(*) FROM countries_people 
+   WHERE idcountry=756`  
+   je peux estimer que `NUMBER` personnes habitent en Suisse.
+
+### Jointure
+1. Avec cette requête:  
+   `SELECT idperson,idcountry,COUNT(idperson) as NbPersonne 
+   FROM countries_people 
+   LEFT JOIN people ON people.id = countries_people.idperson 
+   LEFT JOIN countries ON countries.id = countries_people.idcountry 
+   WHERE countries.name_fr="Suisse"`  
+      je sais que `NUMBER` personnes habitent en Suisse.
