@@ -135,3 +135,11 @@ pour réaliser les demandes du [README.md](README.md).
    LEFT JOIN countries ON countries.id = countries_people.idcountry 
    WHERE idperson is null`  
       liste les pays qui ne possèdent pas de personnes.
+
+1. En exécutant cette requête:  
+   `SELECT firstname AS "Prénom",COUNT(name_fr) AS "NbPays" 
+   FROM countries_people 
+   JOIN people ON people.id = countries_people.idperson 
+   JOIN countries ON countries.id = countries_people.idcountry 
+   GROUP BY firstname HAVING "NbPays"<1`  
+      je sais que `NAME`, `NAME` et `NAME` sont liés à plusieurs pays.
