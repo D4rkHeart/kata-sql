@@ -28,3 +28,7 @@ pour réaliser les demandes du [README.md](README.md).
 1. Cette requête permet de trouver les infos de la personne dont le nom de famille est "Warren" ?
    `SELECT * FROM people 
    WHERE lastname="Warren`
+
+1. La table `people` est triée par nom de famille, ma requête est:  
+   `SELECT * FROM people 
+   ORDER BY lastname`
