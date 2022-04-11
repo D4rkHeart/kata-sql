@@ -84,3 +84,7 @@ pour réaliser les demandes du [README.md](README.md).
 1. Pour ajoutez une colonne `age` dans le résultat de la requête:  
    `SELECT DATEDIFF(now(),birthdate)/365 
    AS Age`
+
+1. Pour générer une liste contenant `Prénom Nom <email@provider.com>;  
+   `SELECT firstname, lastname, email FROM people 
+   WHERE email LIKE '%_@__%.__%' `
