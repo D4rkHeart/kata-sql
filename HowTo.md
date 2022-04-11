@@ -80,3 +80,7 @@ pour réaliser les demandes du [README.md](README.md).
   a. qui ont une addresse email valide:  
 	`SELECT email FROM people 
 	WHERE email LIKE '%_@__%.__%'`
+
+1. Pour ajoutez une colonne `age` dans le résultat de la requête:  
+   `SELECT DATEDIFF(now(),birthdate)/365 
+   AS Age`
