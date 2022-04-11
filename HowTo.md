@@ -143,3 +143,11 @@ pour réaliser les demandes du [README.md](README.md).
    JOIN countries ON countries.id = countries_people.idcountry 
    GROUP BY firstname HAVING "NbPays"<1`  
       je sais que `NAME`, `NAME` et `NAME` sont liés à plusieurs pays.
+
+1. En exécutant cette requête:  
+   `SELECT firstname AS "Prénom",idcountry 
+   FROM countries_people 
+   LEFT JOIN people ON people.id = countries_people.idperson 
+   LEFT JOIN countries ON countries.id = countries_people.idcountry 
+   WHERE countries_people.idcountry != countries.id`  
+      je sais que `NAME` est lié à un pays qui n'existe pas dans la base.
