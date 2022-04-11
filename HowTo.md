@@ -32,3 +32,7 @@ pour réaliser les demandes du [README.md](README.md).
 1. La table `people` est triée par nom de famille, ma requête est:  
    `SELECT * FROM people 
    ORDER BY lastname`
+
+1. Les 5 premières entrées de la table `people` sont:  
+   `SELECT * FROM people 
+   LIMIT 5 `
