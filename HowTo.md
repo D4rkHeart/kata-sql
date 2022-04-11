@@ -18,3 +18,9 @@ pour réaliser les demandes du [README.md](README.md).
 1. La table `people` contient `NUMBER` personnes, ma requête est:  
    `SELECT COUNT(distinct id) 
    FROM people`
+
+1. La table `people` contient `NUMBER` doublons, ma requête est:  
+   `SELECT idnumber, COUNT(idnumber) 
+   FROM people 
+   GROUP BY idnumber 
+   HAVING COUNT(idnumber) > 1;`
