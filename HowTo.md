@@ -51,3 +51,7 @@ pour réaliser les demandes du [README.md](README.md).
    `SELECT * FROM people 
    ORDER BY birthdate 
    DESC LIMIT 5 `
+
+1. La requête suivante permet de trouver l'age en année de chaque personne:  
+   `SELECT FORMAT(DATEDIFF(now(),birthdate)/365,0) 
+   FROM people`
