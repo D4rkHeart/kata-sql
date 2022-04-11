@@ -110,3 +110,12 @@ pour réaliser les demandes du [README.md](README.md).
    LEFT JOIN countries ON countries.id = countries_people.idcountry 
    WHERE NOT countries.name_fr="Suisse"`  
       je sais que `NUMBER` personnes n'habitent pas en Suisse.
+
+1. Avec cette requête:  
+   `SELECT firstname as "prénom",lastname as "Nom",name_fr as "pays" 
+   FROM countries_people 
+   LEFT JOIN people ON people.id = countries_people.idperson 
+   LEFT JOIN countries ON countries.id = countries_people.idcountry 
+   WHERE name_fr="France" or "Allemagne" or "Italie" or "Autriche"`  
+      je liste (nom & prénom) des membres habitants de France, Allemagne, Italie, Autriche 
+      et Lischenchtein.
