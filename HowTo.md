@@ -67,3 +67,16 @@ pour réaliser les demandes du [README.md](README.md).
 1. Le plus long nom de famille est `TEXT`, ma requête est: 
    `SELECT lastname FROM people 
    ORDER BY LENGTH(lastname) DESC LIMIT 1 `
+
+1. La plus longue paire nom + prénom est `TEXT`, ma requête est:  
+   `SELECT lastname,firstname FROM people 
+   ORDER BY LENGTH(`lastname`) DESC LIMIT 1`
+### Invitations
+1. Pour lister tous le membres de plus de 18 ans:  
+   `SELECT DATEDIFF(now(),birthdate)/365 AS Majeur FROM people 
+   HAVING Majeur>=18`
+  a. et de moins de 60 ans:  
+     	`SELECT DATEDIFF(now(),birthdate)/365 AS Age FROM people HAVING Age>60`
+  a. qui ont une addresse email valide:  
+	`SELECT email FROM people 
+	WHERE email LIKE '%_@__%.__%'`
