@@ -63,3 +63,7 @@ pour réaliser les demandes du [README.md](README.md).
 1. Le plus long prénom est `TEXT`, ma requête est:  
    `SELECT firstname FROM people 
    ORDER BY LENGTH(firstname) DESC LIMIT 1`
+
+1. Le plus long nom de famille est `TEXT`, ma requête est: 
+   `SELECT lastname FROM people 
+   ORDER BY LENGTH(lastname) DESC LIMIT 1 `
