@@ -37,7 +37,12 @@ pour réaliser les demandes du [README.md](README.md).
    `SELECT * FROM people 
    LIMIT 5 `
 
-1. Je trouve toutes les personnes dont le nom ou le prénom contient `ojo`, ma requête est: 
+1. Je trouve toutes les personnes dont le nom ou le prénom contient `ojo`, ma requête est:  
    `SELECT * FROM people 
    WHERE firstname OR lastname 
    LIKE '%ojo%'`
+
+1. Les 5 personnes plus agées sont obtenus avec cette requête:  
+   `SELECT * FROM people 
+   ORDER BY birthdate 
+   ASC LIMIT 5 `
