@@ -151,3 +151,10 @@ pour réaliser les demandes du [README.md](README.md).
    LEFT JOIN countries ON countries.id = countries_people.idcountry 
    WHERE countries_people.idcountry != countries.id`  
       je sais que `NAME` est lié à un pays qui n'existe pas dans la base.
+
+1. De la manière suivante:  
+   `SELECT name_fr,COUNT(idcountry) as NbPersonnesParPays, (count(idcountry)/(SELECT count(*) AS "nbrde personnes" FROM countries_PEOPLE))*100 as "%PersonnesParPays" FROM countries_people 
+   LEFT JOIN people ON people.id = countries_people.idperson 
+   LEFT JOIN countries ON countries.id = countries_people.idcountry 
+   WHERE name_fr IS NOT NULL GROUP BY name_fr;`  
+      nous pouvons afficher le pourcentages de personnes par pays.
